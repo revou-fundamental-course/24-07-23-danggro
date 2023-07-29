@@ -177,6 +177,14 @@ body {
   outline: 2px solid var(--yellow);
 }
 
+#contact select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--white);
+  font-family: "Roboto", "sans-serif";
+}
+
 #contact button {
   font-weight: 500;
   padding-block: 0.5rem;
@@ -190,5 +198,5 @@ body {
 
 #contact button:hover {
   background-color: var(--transparent);
-  color: var(--primary-1);
+  color: var(--yellow);
 }
