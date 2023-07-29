@@ -91,7 +91,7 @@ body {
 #hero {
   display: flex;
   align-items: center;
-  margin-block: 2rem;
+  padding-block: 2rem;
 }
 
 #hero div:first-child {
@@ -138,12 +138,91 @@ body {
   max-width: 380px;
 }
 
+/* Review & Contact */
+#review-contact {
+  display: flex;
+  padding-block: 2rem;
+}
+
+#review {
+  width: calc((8 / 12) * 100%);
+  display: grid;
+  place-items: center;
+}
+
+#review-stroke {
+  padding: 2rem;
+  border: solid 5px var(--primary-1);
+  width: 80%;
+}
+
+#review img {
+  max-width: 100%;
+  background-size: cover;
+}
+
+.review-text {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.review-id {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.review-id img {
+  width: 50px;
+}
+
+.review-id div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.review-name {
+  font-weight: 700;
+}
+
+.review-job {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#review-circle {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+#review-circle .circle {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--tertiary);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#review-circle .select {
+  background-color: #272343;
+  cursor: default;
+}
+
 /* Contact */
 #contact {
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem;
   background-color: var(--primary-1);
   width: calc((4 / 12) * 100%);
-  border-radius: 1rem;
+  height: fit-content;
+  border-radius: 0.75rem;
   color: var(--white);
 }
 
@@ -156,7 +235,7 @@ body {
 #contact form {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -194,6 +273,7 @@ body {
   letter-spacing: 0.15rem;
   border: 2px solid var(--yellow);
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 #contact button:hover {
