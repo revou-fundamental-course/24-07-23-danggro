@@ -137,3 +137,58 @@ body {
 #hero div:last-child img {
   max-width: 380px;
 }
+
+/* Contact */
+#contact {
+  padding: 1.5rem 2rem;
+  background-color: var(--primary-1);
+  width: calc((4 / 12) * 100%);
+  border-radius: 1rem;
+  color: var(--white);
+}
+
+#contact h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 2rem;
+}
+
+#contact label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+#contact input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  outline: none;
+  border-radius: 0.25rem;
+}
+
+#contact input:focus {
+  outline: 2px solid var(--yellow);
+}
+
+#contact button {
+  font-weight: 500;
+  padding-block: 0.5rem;
+  color: var(--primary-2);
+  border-radius: 0.25rem;
+  background-color: var(--yellow);
+  letter-spacing: 0.15rem;
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: var(--transparent);
+  color: var(--primary-1);
+}
