@@ -141,7 +141,7 @@ body {
 /* Review & Contact */
 #review-contact {
   display: flex;
-  padding-block: 2rem;
+  padding-block: 4rem;
 }
 
 #review {
@@ -149,6 +149,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 #review-stroke {
@@ -220,6 +221,9 @@ body {
 /* Feature */
 #feature {
   padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 #feature .feature-list {
   display: flex;
@@ -229,13 +233,13 @@ body {
 }
 
 #feature .feature-list span {
-  width: 2.5rem;
-  height: 2.5rem;
+  padding: 0.75rem 1rem;
   background-color: var(--primary-1);
   color: var(--white);
   display: grid;
   border-radius: 100%;
   place-items: center;
+  font-weight: 700;
 }
 
 /* Contact */
@@ -301,4 +305,68 @@ body {
 #contact button:hover {
   background-color: var(--transparent);
   color: var(--yellow);
+}
+
+/* Package */
+#package {
+  padding-block: 4rem;
+  background-color: var(--secondary);
+}
+
+#package h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 4rem;
+}
+
+#package-region,
+#package-destination {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+#package-destination .destination-list,
+#package-region .region-list {
+  display: flex;
+  gap: 0.75rem;
+  width: calc((3.5 / 12) * 100%);
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+#package-region .region-list span {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.75rem;
+  background-color: var(--primary-1);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+#package-destination .destination-list img {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+#package-destination .destination-list h3,
+#package-region .region-list h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#line {
+  margin-inline: auto;
+  margin-block: 3rem;
+  display: block;
+  width: 30%;
+  border: 2px solid var(--primary-1);
 }
