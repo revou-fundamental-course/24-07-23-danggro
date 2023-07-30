@@ -370,3 +370,43 @@ body {
   width: 30%;
   border: 2px solid var(--primary-1);
 }
+
+/* Call */
+#call {
+  margin-block: 4rem;
+  text-align: center;
+}
+
+#call-stroke {
+  max-width: 60%;
+  margin: auto;
+  padding: 2rem;
+  border: 5px solid var(--yellow);
+}
+
+#call h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#call p {
+  margin-bottom: 2rem;
+}
+
+#call button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.75rem 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--yellow);
+  color: var(--primary-1);
+  cursor: pointer;
+  border: 3px solid var(--yellow);
+  transition: all 100ms ease-out;
+}
+
+#call button:hover {
+  background-color: transparent;
+  color: var(--primary-1);
+}
