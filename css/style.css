@@ -48,6 +48,13 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--primary-1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: var(--white);
+  z-index: 9999;
+  transition: all 200ms ease-out;
 }
 
 #logo {
@@ -91,7 +98,8 @@ body {
 #hero {
   display: flex;
   align-items: center;
-  padding-block: 2rem;
+  padding-top: 130px;
+  padding-bottom: 2rem;
 }
 
 #hero div:first-child {
@@ -172,7 +180,6 @@ body {
   width: 100%;
   flex-shrink: 0;
   transition: all 800ms ease-in-out;
-  /* transform: translateX(-200%); */
 }
 
 .review-text {
@@ -320,7 +327,7 @@ body {
 
 /* Package */
 #package {
-  padding-block: 4rem;
+  padding-block: 6rem;
   background-color: var(--secondary);
 }
 

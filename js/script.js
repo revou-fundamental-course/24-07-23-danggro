@@ -112,3 +112,14 @@ function selectReview(circle) {
   i = parseInt(circle.getAttribute("data-index"));
   autoSlide();
 }
+
+document.addEventListener("scroll", () => {
+  const nav = document.getElementById("navigation");
+  if (window.scrollY > 0) {
+    nav.style.paddingBlock = "0.6rem";
+    nav.style.boxShadow = "0 0.05rem 1rem 0.1rem rgba(0,0,0,0.2)";
+  } else {
+    nav.style.paddingBlock = "1.5rem";
+    nav.style.boxShadow = "0 0 0 0";
+  }
+});
