@@ -39,24 +39,65 @@
       <!-- Review Section -->
       <section id="review">
         <div id="review-stroke">
-          <div class="review-container">
-            <!-- <img src="assets/Bali/Bali-1.jpg" alt="Bali-1" /> -->
-            <p class="review-text">
-              &quot;Pikiranku menjadi segar kembali setelah liburan bersama
-              Dolan.&quot;
-            </p>
-            <div class="review-id">
-              <img src="assets/Avatar/avatar-3.png" alt="avatar-3" />
-              <div>
-                <p class="review-name">Slamet Arjuna</p>
-                <p class="review-job">Software Engineer, 30</p>
+          <div id="review-container">
+            <div class="review-item">
+              <!-- <img src="assets/Bali/Bali-1.jpg" alt="Bali-1" /> -->
+              <p class="review-text">
+                &quot;Pikiranku menjadi segar kembali setelah liburan bersama
+                Dolan.&quot;
+              </p>
+              <div class="review-id">
+                <img src="assets/Avatar/avatar-3.png" alt="avatar-3" />
+                <div>
+                  <p class="review-name">Slamet Arjuna</p>
+                  <p class="review-job">Software Engineer, 30</p>
+                </div>
+              </div>
+            </div>
+            <div class="review-item">
+              <!-- <img src="assets/Bromo/Bromo-1.jpg" alt="Bromo-1" /> -->
+              <p class="review-text">
+                &quot;Perjalanan yang sangat menyenangkan bersama Dolan.&quot;
+              </p>
+              <div class="review-id">
+                <img src="assets/Avatar/avatar-1.png" alt="avatar-1" />
+                <div>
+                  <p class="review-name">Dewi Lilac</p>
+                  <p class="review-job">Data Analyst, 25</p>
+                </div>
+              </div>
+            </div>
+            <div class="review-item">
+              <!-- <img src="assets/Raja Ampat/Raja-1.jpg" alt="Raja-1" /> -->
+              <p class="review-text">
+                &quot;Suasana hangat dan menyenangkan saat liburan bersama Dolan
+                membuat saya ingin kembali ke tempat wisata.&quot;
+              </p>
+              <div class="review-id">
+                <img src="assets/Avatar/avatar-2.png" alt="avatar-2" />
+                <div>
+                  <p class="review-name">Rani Mawar</p>
+                  <p class="review-job">Ibu Rumah Tangga, 32</p>
+                </div>
               </div>
             </div>
           </div>
           <div id="review-circle">
-            <span class="circle select"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
+            <span
+              class="circle"
+              data-index="0"
+              onclick="selectReview(this)"
+            ></span>
+            <span
+              class="circle"
+              data-index="1"
+              onclick="selectReview(this)"
+            ></span>
+            <span
+              class="circle"
+              data-index="2"
+              onclick="selectReview(this)"
+            ></span>
           </div>
         </div>
 

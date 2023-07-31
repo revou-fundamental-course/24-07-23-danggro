@@ -80,3 +80,35 @@ function removeValidation(event) {
     event.target.parentElement.style.setProperty("--opacity", 0);
   }
 }
+
+let i = 0;
+let myTimer;
+function autoSlide() {
+  const review = Array.from(document.getElementsByClassName("review-item"));
+  const circle = Array.from(document.getElementsByClassName("circle"));
+
+  slide(review, circle);
+
+  i = i + 1;
+  if (i > review.length - 1) {
+    i = 0;
+  }
+  myTimer = setTimeout(autoSlide, 3000);
+}
+autoSlide();
+
+function slide(review, circle) {
+  review.forEach((item) => {
+    item.style.transform = `translateX(calc(-${i * 100}%))`;
+  });
+  circle.forEach((item) => {
+    item.classList.remove("select");
+  });
+  circle[i].classList.add("select");
+}
+
+function selectReview(circle) {
+  clearTimeout(myTimer);
+  i = parseInt(circle.getAttribute("data-index"));
+  autoSlide();
+}
