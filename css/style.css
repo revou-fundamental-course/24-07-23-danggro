@@ -248,7 +248,6 @@ body {
   background-color: var(--primary-1);
   width: calc((4 / 12) * 100%);
   height: fit-content;
-  /* border-radius: 0.75rem; */
   color: var(--white);
 }
 
@@ -261,7 +260,7 @@ body {
 #contact form {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 0.7rem;
   margin-top: 2rem;
 }
 
@@ -443,4 +442,26 @@ footer div a {
 
 footer div a:hover {
   background-color: var(--yellow);
+}
+
+/* Validation */
+#input-name::after,
+#input-email::after,
+#input-interest::after {
+  display: block;
+  opacity: var(--opacity, 0);
+  font-size: 0.875rem;
+  color: var(--yellow);
+  margin-top: 0.4rem;
+  transition: all 50ms ease-out;
+}
+
+#input-name::after {
+  content: attr(data-text);
+}
+#input-email::after {
+  content: attr(data-text);
+}
+#input-interest::after {
+  content: var(--content, "*Mohon pilih salah satu");
 }

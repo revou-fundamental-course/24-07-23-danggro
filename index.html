@@ -13,9 +13,9 @@
         <a href="" id="logo">Dolan.</a>
         <nav>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Our Package</a></li>
-            <li><a href="">Call Us</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#package">Our Package</a></li>
+            <li><a href="#call">Call Us</a></li>
           </ul>
         </nav>
       </section>
@@ -59,8 +59,8 @@
             <span class="circle"></span>
           </div>
         </div>
-        <!-- Feature Section -->
 
+        <!-- Feature Section -->
         <ol id="feature">
           <li>
             <div class="feature-list">
@@ -97,18 +97,34 @@
       <section id="contact">
         <h3>Contact Us</h3>
         <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p>
-        <form action="">
-          <div>
+        <form>
+          <div id="input-name" data-text="*Nama tidak boleh kosong">
             <label for="name">Your Name:</label>
-            <input id="name" type="text" placeholder="First and last name" />
+            <input
+              id="name"
+              type="text"
+              placeholder="First and last name"
+              maxlength="20"
+              oninput="removeValidation(event)"
+            />
           </div>
-          <div>
+          <div id="input-email" data-text="*Email tidak boleh kosong">
             <label for="email">Email Address:</label>
-            <input id="email" type="email" placeholder="example@gmail.com" />
+            <input
+              id="email"
+              type="email"
+              placeholder="example@gmail.com"
+              maxlength="30"
+              oninput="removeValidation(event)"
+            />
           </div>
-          <div>
+          <div id="input-interest">
             <label for="interest">What you interested in:</label>
-            <select id="interest" name="interest">
+            <select
+              id="interest"
+              name="interest"
+              onchange="removeValidation(event)"
+            >
               <option value="select">Select option</option>
               <option value="pantai">Pantai</option>
               <option value="laut">Laut</option>
@@ -117,7 +133,7 @@
               <option value="taman_bermain">Taman Bermain</option>
             </select>
           </div>
-          <button id="send">SEND</button>
+          <button id="send" onclick="clickSend(event)">SEND</button>
         </form>
       </section>
     </div>
