@@ -123,3 +123,14 @@ document.addEventListener("scroll", () => {
     nav.style.boxShadow = "0 0 0 0";
   }
 });
+
+function slideNav() {
+  const navMobile = document.getElementById("nav-mobile");
+
+  navMobile.style.transform = "translateX(0)";
+}
+
+function closeNav() {
+  const navMobile = document.getElementById("nav-mobile");
+  navMobile.style.transform = "translateX(100%)";
+}

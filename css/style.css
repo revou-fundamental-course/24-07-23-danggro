@@ -64,32 +64,33 @@ body {
   color: var(--primary-1);
 }
 
-#navigation nav ul {
+#nav-desktop {
   display: flex;
 }
 
-#navigation nav ul a {
+#nav-desktop a {
   padding: 0.5rem 1rem;
   border: 1px solid var(--primary-1);
 }
 
-#navigation nav ul li:first-child a {
+#nav-desktop li:first-child a {
   border-right: 0;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
-#navigation nav ul li:last-child a {
+#nav-desktop li:last-child a {
   border-left: 0;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-#navigation nav ul li a {
+#nav-desktop li a {
   font-size: 1rem;
   font-weight: 500;
   color: #2d334a;
   transition: all 100ms ease-out;
 }
-#navigation nav ul li a:hover {
+
+#nav-desktop li a:hover {
   background-color: var(--yellow);
   border-color: var(--yellow);
 }
@@ -396,7 +397,7 @@ body {
 }
 
 #call-stroke {
-  max-width: 60%;
+  width: 60%;
   margin: auto;
   padding: 2rem;
   border: 5px solid var(--yellow);
@@ -483,4 +484,132 @@ footer div a:hover {
 }
 #input-interest::after {
   content: var(--content, "*Mohon pilih salah satu");
+}
+
+@media only screen and (max-width: 768px) {
+  #nav-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /* Navigation */
+  #nav-desktop li {
+    display: none;
+  }
+
+  #hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #hamburger span {
+    display: block;
+    border: 2px solid var(--primary-1);
+    width: 1.75rem;
+  }
+
+  #nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--primary-1);
+    padding: 3rem;
+    transform: translateX(100%);
+    transition: all 500ms ease-in-out;
+  }
+
+  #nav-mobile li {
+    width: fit-content;
+  }
+  #nav-mobile a {
+    color: var(--white);
+  }
+  #nav-mobile a:hover {
+    text-decoration: underline;
+  }
+
+  #nav-mobile button {
+    cursor: pointer;
+    z-index: 50;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background-color: transparent;
+  }
+
+  #nav-mobile span {
+    display: block;
+    width: 1.75rem;
+    border: 2px solid var(--white);
+  }
+
+  #nav-mobile span:first-child {
+    transform: translateY(50%) rotate(45deg);
+  }
+
+  #nav-mobile span:last-child {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  /* Hero */
+  #hero {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  #hero div:first-child,
+  #hero div:first-child h1,
+  #hero div:first-child p,
+  #hero div:last-child,
+  #hero div:last-child img {
+    width: 100%;
+  }
+
+  #hero div:first-child {
+    flex-direction: column;
+  }
+
+  /* Review & Contact */
+  #review-contact {
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 2rem;
+  }
+
+  #review,
+  #contact,
+  #review-stroke {
+    width: 100%;
+  }
+  #review-stroke {
+    padding: 1rem;
+  }
+  #feature {
+    padding: 0;
+  }
+
+  /* Package */
+  #package-region,
+  #package-destination {
+    flex-direction: column;
+  }
+  #package-region .region-list,
+  #package-destination .destination-list {
+    width: 100%;
+  }
+
+  /* Call */
+  #call-stroke {
+    width: 100%;
+  }
 }

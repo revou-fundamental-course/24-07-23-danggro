@@ -12,10 +12,25 @@
       <section id="navigation" class="container">
         <a href="" id="logo">Dolan.</a>
         <nav>
-          <ul>
+          <ul id="nav-desktop">
             <li><a href="#hero">Home</a></li>
             <li><a href="#package">Our Package</a></li>
             <li><a href="#call">Call Us</a></li>
+          </ul>
+          <button id="hamburger" onclick="slideNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul id="nav-mobile">
+            <li><a href="#hero" onclick="closeNav()">Home</a></li>
+            <li><a href="#package" onclick="closeNav()">Our Package</a></li>
+            <li><a href="#call" onclick="closeNav()">Call Us</a></li>
+            <button onclick="closeNav()">
+              <span></span>
+              <span></span>
+            </button>
           </ul>
         </nav>
       </section>
