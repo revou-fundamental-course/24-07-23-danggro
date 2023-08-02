@@ -46,6 +46,7 @@ function clickSend(event) {
         "data-text",
         "*Masukkan email yang valid"
       );
+      email.parentElement.style.setProperty("--opacity", 100);
     }
 
     //Kondisi interest harus terpilih
