@@ -362,8 +362,16 @@ body {
   gap: 0.75rem;
   width: calc((3.5 / 12) * 100%);
   background-color: var(--white);
+  border: 2px solid var(--white);
   padding: 2rem;
   border-radius: 0.5rem;
+  transition: all 200ms ease-in-out;
+}
+
+#package-destination .destination-list:hover,
+#package-region .region-list:hover {
+  transform: translateY(-10%);
+  border: 2px solid var(--primary-1);
 }
 
 #package-region .region-list span {
